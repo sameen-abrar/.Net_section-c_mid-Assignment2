@@ -1,0 +1,40 @@
+﻿
+@{
+//ViewBag.Title = "Registration";
+    
+}
+
+<h2>Registration</h2>
+
+<form action="" method="post">
+
+    <input type="text" name="Name" class="form-control" placeholder="Enter your name" value="@(Model==null ?"":Model.name)" />
+    <span class="alert-danger">@Html.ValidationMessage("name")</span>
+    
+    <input type="text" name="id" class="form-control" placeholder="ID: XX-XXXX-X" value="@(Model==null ?"":Model.id)" />
+    <span class="alert-danger">@Html.ValidationMessage("id")</span>
+    
+    <div class="form-control" style="width: 24.5%">
+        Gender:
+        <input type="radio" name="gender" value="Male" /> Male
+        <input type="radio" name="gender" value="Female" /> Female
+    </div>
+    <span class="alert-danger">@Html.ValidationMessage("gender")</span>
+    
+    <input type="email" name="email" class="form-control" placeholder="Enter your Email" value="@(Model==null ?"":Model.email)" />
+    <span class="alert-danger">@Html.ValidationMessage("email")</span>
+    
+    <input type="password" name="password" class="form-control" placeholder="Enter your password" value="@(Model==null ?"":Model.password)" />
+    <span class="alert-danger">@Html.ValidationMessage("password")</span>
+    
+    <input type="password" name="confpassword" class="form-control" placeholder="Re-type your password" value="@(Model==null ?"":Model.confpassword)" />
+    <span class="alert-danger">@Html.ValidationMessage("confpassword")</span>
+    
+    <input type="text" placeholder="Date of Birth" name="dob" class="form-control" onfocus="(this.type = 'date')" value="@(Model==null ?"":Model.dob)" />
+    <span class="alert-danger">@Html.ValidationMessage("dob")</span>
+    
+    <input type="submit" value="Submit" />
+
+</form>
+
+
